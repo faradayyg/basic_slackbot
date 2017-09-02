@@ -37,13 +37,13 @@ class HelloWorld(Resource):
 				 	if handlers.create_project(event['text']) == 'nan':
 				 		pass
 				 	else:
-				 		slack_client.api_call(
+				 		return slack_client.api_call(
 						  "chat.postEphemeral",
 						  channel="#"+channel_info['channel']['name_normalized'],
 						  text= "Project was successfully created",
 						  user = event['user']
 						)
-					return request.json['event']
+
 
 				if event['text'].find("remove") > -1 or event['text'].find("delete") > -1\
 				 and event['text'].find("project") > -1:
