@@ -7,12 +7,12 @@ class HelloWorld(Resource):
 		return {'hello' : 'world'}
 
 	def post(self):
-		return {'challenge' : request.form['challenge']}
+		return request.json
 
 class ToDo(Resource):
 	def get(self):
 		return 'yes'
 
 
-# api.add_resource(HelloWorld, '/api/v1')
+api.add_resource(HelloWorld, '/api/v1')
 api.add_resource(ToDo, '/api/v1/todo')
