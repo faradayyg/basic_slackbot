@@ -1,9 +1,13 @@
 from app import app, api, Resource
+from flask import request
 
 
 class HelloWorld(Resource):
 	def get(self):
 		return {'hello' : 'world'}
+
+	def post(self):
+		return request.form['challenge']
 
 class ToDo(Resource):
 	def get(self):
