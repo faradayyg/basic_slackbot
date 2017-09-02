@@ -43,6 +43,7 @@ class HelloWorld(Resource):
 						  text= "Project was successfully created",
 						  user = event['user']
 						)
+					return request.json['event']
 
 				if event['text'].find("remove") > -1 or event['text'].find("delete") > -1\
 				 and event['text'].find("project") > -1:
