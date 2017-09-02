@@ -7,7 +7,7 @@ class HelloWorld(Resource):
 		return {'hello' : 'world'}
 
 	def post(self):
-		return request.form['challenge']
+		return {'challenge' : request.form['challenge']}
 
 class ToDo(Resource):
 	def get(self):
