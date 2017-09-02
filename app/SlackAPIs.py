@@ -16,7 +16,7 @@ class HelloWorld(Resource):
 		print(request.json)
 		event = request.json['event']
 		if event['type'] == 'message':
-			if event['text'].find("@uobot") > -1:
+			if event['text'].find("<@U6Y9ASQTZ>") > -1:
 				channel_info = slack_client.api_call("channels.info", channel=event['channel'])
 				if event['text'].find("show") > -1 or event['text'].find("list") > -1\
 				or event['text'].find("display") > -1 and event['text'].find("project") > -1:
