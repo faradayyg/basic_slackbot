@@ -1,4 +1,8 @@
 *.pyc
 staticfiles
 .env
-app/__pycache__
+app/__pycache__/*
+*/__pycache__
+db.sqlite
+venv
+venv/*

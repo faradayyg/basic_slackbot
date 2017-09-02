@@ -3,9 +3,7 @@ from flask import request
 
 from slackclient import SlackClient 
 
-BOT_NAME = 'Uobot'
-
-slack_client = SlackClient('xoxb-236316908951-Fjnqv4KZARjLgulLcpbxZ7XO')
+slack_client = SlackClient('Bot User OAuth Key Here')
 
 class HelloWorld(Resource):
 	def get(self):
