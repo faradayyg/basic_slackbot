@@ -13,6 +13,7 @@ class HelloWorld(Resource):
 
 	def post(self):
 
+		print(request.json)
 		event = request.json['event']
 		if event['type'] == 'message':
 			if event['text'].find("@uobot") > -1:
