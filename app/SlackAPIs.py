@@ -12,11 +12,11 @@ class HelloWorld(Resource):
 		return {'hello' : 'world'}
 
 	def post(self):
-		slack_client.api_call(
-		  "chat.postMessage",
-		  channel="#bot_test",
-		  text="Hello from Python! :tada:"+str(request.json)
-		)
+		# slack_client.api_call(
+		#   "chat.postMessage",
+		#   channel="#bot_test",
+		#   text="Hello from Python! :tada:"+str(request.json)
+		# )
 
 		return request.json
 
