@@ -1,5 +1,5 @@
 from app import app
-
-@app.route('/')
+from flask import request
+@app.route('/api/v1', methods=['POST','GET'])
 def home():
-	return "Oh yeah, I am home"
+	return request.form['challenge']
